@@ -15,13 +15,12 @@ let imageUrl = 'mapa 09-22.png',
     imageBounds = [[-39.6523, -72.9625], [-39.6712,-72.9405]];
 L.imageOverlay(imageUrl, imageBounds).addTo(map);
 
-map.locate({setView: true, maxZoom: 17});
+map.locate({setView: true, watch: true, maxZoom: 17});
 
 function onLocationFound(e) {
-  let radius = e.accuracy;
+  let radius = e.accuracy / 2;
 
   L.marker(e.latlng).addTo(map);
-  L.marker(e.latlng).update();
   L.circle(e.latlng, radius).addTo(map);
 }
 
