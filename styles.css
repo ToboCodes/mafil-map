@@ -1,8 +1,64 @@
-body {
-    padding: 0;
+html, body {
     margin: 0;
-}
-html, body, #map {
-    height: 100vh;
-    width: 100vw;
-}
+    width: 100%;
+    height: 100%;
+  }
+  #map {
+    float: left;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /*Wraperclass for the divicon*/
+  .map-label {
+    position: absolute;
+    bottom: 0;left: -50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  /*Wrap the content of the divicon (text) in this class*/
+  .map-label-content {
+    order: 1;
+    position: relative; left: -50%;
+    background-color: #fff;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #444;
+    padding: 3px;
+    white-space: nowrap;
+  }
+  /*Add this arrow*/
+  .map-label-arrow {
+    order: 2;
+    width: 0px; height: 0px; left: 50%;
+    border-style: solid;
+    border-color: #444 transparent transparent transparent;
+    border-width: 10px 6px 0 6px; /*[first number is height, second/fourth are rigth/left width]*/
+    margin-left: -6px;
+  }
+  
+  /*Instance classes*/
+  .map-label.square {
+    font-family: "Martel Sans", sans-serif;
+    opacity: 0.45;
+    font-size: 10.5px;
+  }
+  .map-label.map-label.square > .map-label-arrow {
+    opacity: 0;
+  }
+  
+  .map-label.number {
+    font-family: "Martel Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 21px;
+    color: #5B3C88;
+  }
+  .map-label.number > .map-label-content {
+    border-color: #5B3C88;
+  }
+  .map-label.number > .map-label-arrow {
+    border-top-color: #5B3C88;
+  }
