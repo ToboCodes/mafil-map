@@ -41,24 +41,32 @@ html, body {
   }
   
   /*Instance classes*/
-  .map-label.square {
-    font-family: "Martel Sans", sans-serif;
-    opacity: 0.45;
-    font-size: 10.5px;
+  .map-label.number {
+    font-family: "Andada Pro", serif;
+    font-weight: bolder;
+    font-size: 21px;
+    color: black;
+    text-shadow: #444;
+    font-weight: bold;
   }
-  .map-label.map-label.square > .map-label-arrow {
+  .map-label.number > .map-label-content {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .map-label.number > .map-label-arrow {
     opacity: 0;
   }
   
-  .map-label.number {
-    font-family: "Martel Sans", sans-serif;
-    font-weight: bolder;
-    font-size: 21px;
-    color: #5B3C88;
+  .map-label.square {
+    font-family: "Noto Sans", serif;
+    opacity: 0.45;
+    font-size: 12px;
+    font-weight: bold;
   }
-  .map-label.number > .map-label-content {
-    border-color: #5B3C88;
+  .map-label.map-label.square > .map-label-content {
+    background-color: transparent;
+    border-color: transparent;
   }
-  .map-label.number > .map-label-arrow {
-    border-top-color: #5B3C88;
+  .map-label.map-label.square > .map-label-arrow {
+    opacity: 0;
   }
