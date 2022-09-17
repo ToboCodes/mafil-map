@@ -65,6 +65,7 @@ html, body {
     font-weight: bold;
     top: -23px;
     left: -2px;
+
   }
   .map-label.map-label.square > .map-label-content {
     background-color: transparent;

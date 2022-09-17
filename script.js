@@ -11,7 +11,8 @@ let map = L.map('map', {
     coord1,
     coord2
   ],
-}).setView(view, 16);
+}).setView(view, 17);
+
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -122,6 +123,7 @@ const terr8 = L.polygon(zone8, {color: color8, fillOpacity: 0.5, weight: 4}).add
 const terr9 = L.polygon(zone9, {color: color9, fillOpacity: 0.5, weight: 4}).addTo(map);
 const terr10A = L.polygon(zone10A, {color: color10, fillOpacity: 0.5, weight: 4}).addTo(map);
 const terr10B = L.polygon(zone10B, {color: color10, fillOpacity: 0.5, weight: 4}).addTo(map);
+
 const terr17 = L.polygon(zone17, {color: color17, fillOpacity: 0.5, weight: 4}).addTo(map);
 
 
