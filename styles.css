@@ -48,6 +48,7 @@ html, body {
     color: black;
     text-shadow: #444;
     font-weight: bold;
+    top: -15px;
   }
   .map-label.number > .map-label-content {
     background-color: transparent;
@@ -62,6 +63,8 @@ html, body {
     opacity: 0.45;
     font-size: 12px;
     font-weight: bold;
+    top: -23px;
+    left: -2px;
   }
   .map-label.map-label.square > .map-label-content {
     background-color: transparent;

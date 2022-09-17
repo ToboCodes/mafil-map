@@ -11,7 +11,7 @@ let map = L.map('map', {
     coord1,
     coord2
   ],
-}).setView(view, 17);
+}).setView(view, 16);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -78,6 +78,18 @@ const zone9 = [[-39.66002, -72.95960], [-39.66076, -72.95952], [-39.66240, -72.9
 [-39.66174, -72.95302], [-39.66150, -72.95552], [-39.66153, -72.95599], [-39.66169, -72.95657],
 [-39.66202, -72.95740], [-39.66136, -72.95780], [-39.66164, -72.95875],[-39.66070, -72.95900],
 [-39.65999, -72.95908]];
+const zone10A = [[-39.66246, -72.95027], [-39.66114, -72.95074], [-39.66090, -72.95071], [-39.66065, -72.95058],
+[-39.66038, -72.95037], [-39.66016, -72.95004], [-39.65997, -72.94976], [-39.65988, -72.94968],
+[-39.65984, -72.94966], [-39.66021, -72.94964], [-39.66057, -72.95016], [-39.66078, -72.95032],
+[-39.66101, -72.95037], [-39.66127, -72.95035], [-39.66233, -72.94992]]
+const zone10B = [[-39.66231, -72.94989], [-39.66206, -72.94929], [-39.66124, -72.94988], [-39.66121, -72.94982],
+[-39.66204, -72.94922], [-39.66192, -72.94895], [-39.66095, -72.94965], [-39.66091, -72.94958],
+[-39.66188, -72.94888], [-39.66159, -72.94826], [-39.66129, -72.94851], [-39.66152, -72.94899],
+[-39.66146, -72.94903], [-39.66123, -72.94855], [-39.66101, -72.94871], [-39.66122, -72.94916],
+[-39.66117, -72.94921], [-39.66095, -72.94876], [-39.66068, -72.94895], [-39.66039, -72.94920],
+[-39.66010, -72.94942], [-39.65986, -72.94963], [-39.66021, -72.94961], [-39.66060, -72.94954],
+[-39.66087, -72.94992], [-39.66120, -72.95013], [-39.66162, -72.94989], [-39.66194, -72.94973],
+[-39.66204, -72.95000]]
 
 const zone17 = [[-39.65977, -72.94962], [-39.65933, -72.94941], [-39.65927, -72.94934], [-39.65902, -72.94890],
 [-39.65848, -72.94788], [-39.65887, -72.94750], [-39.65879, -72.94731], [-39.65926, -72.94686],
@@ -94,6 +106,7 @@ const color6 = "#888888";
 const color7 = "#20B250";
 const color8 = "#5CF4F1";
 const color9 = "#77CDE8";
+const color10 = "#FD76B8";
 
 const color17 = "#EF00F1";
 
@@ -107,46 +120,47 @@ const terr6 = L.polygon(zone6, {color: color6, fillOpacity: 0.5, weight: 4}).add
 const terr7 = L.polygon(zone7, {color: color7, fillOpacity: 0.5, weight: 4}).addTo(map);
 const terr8 = L.polygon(zone8, {color: color8, fillOpacity: 0.5, weight: 4}).addTo(map);
 const terr9 = L.polygon(zone9, {color: color9, fillOpacity: 0.5, weight: 4}).addTo(map);
-
+const terr10A = L.polygon(zone10A, {color: color10, fillOpacity: 0.5, weight: 4}).addTo(map);
+const terr10B = L.polygon(zone10B, {color: color10, fillOpacity: 0.5, weight: 4}).addTo(map);
 const terr17 = L.polygon(zone17, {color: color17, fillOpacity: 0.5, weight: 4}).addTo(map);
 
 
 // Bård Romstad's pure css divIcon labels
 data = [
-  {state: 'number', content: '1', lat: -39.66714, lon: -72.95342},
+  {state: 'number', content: '1', lat: -39.66712, lon: -72.95335},
   {state: 'square', content: 'A', lat: -39.66740, lon: -72.95298},
   {state: 'square', content: 'B', lat: -39.66835, lon: -72.95293},
   {state: 'square', content: 'C', lat: -39.66893, lon: -72.95288},
   {state: 'square', content: 'D', lat: -39.66947, lon: -72.95283},
-  {state: 'number', content: '2', lat: -39.66758, lon: -72.95431},
+  {state: 'number', content: '2', lat: -39.66681, lon: -72.95468},
   {state: 'square', content: 'A', lat: -39.66666, lon: -72.95730},
   {state: 'square', content: 'B', lat: -39.66624, lon: -72.95599},
   {state: 'square', content: 'C', lat: -39.66877, lon: -72.95457},
   {state: 'square', content: 'D', lat: -39.66960, lon: -72.95435},
   {state: 'square', content: 'E', lat: -39.66995, lon: -72.95330},
-  {state: 'number', content: '3', lat: -39.66777, lon: -72.95194},
+  {state: 'number', content: '3', lat: -39.66687, lon: -72.95182},
   {state: 'square', content: 'A', lat: -39.66743, lon: -72.95146},
   {state: 'square', content: 'B', lat: -39.66834, lon: -72.95126},
   {state: 'square', content: 'C', lat: -39.66902, lon: -72.95177},
-  {state: 'number', content: '4', lat: -39.66781, lon: -72.95018},
+  {state: 'number', content: '4', lat: -39.66705, lon: -72.95067},
   {state: 'square', content: 'A', lat: -39.66685, lon: -72.95024},
   {state: 'square', content: 'B', lat: -39.66771, lon: -72.94972},
   {state: 'square', content: 'C', lat: -39.66891, lon: -72.94851},
-  {state: 'number', content: '5', lat: -39.66478, lon: -72.95177},
+  {state: 'number', content: '5', lat: -39.66467, lon: -72.95136},
   {state: 'square', content: 'A', lat: -39.66413, lon: -72.95142},
   {state: 'square', content: 'B', lat: -39.66497, lon: -72.95226},
   {state: 'square', content: 'C', lat: -39.66504, lon: -72.95107},
   {state: 'square', content: 'D', lat: -39.66617, lon: -72.95058},
-  {state: 'number', content: '6', lat: -39.66406, lon: -72.95935},
+  {state: 'number', content: '6', lat: -39.66364, lon: -72.95855},
   {state: 'square', content: 'A', lat: -39.66514, lon: -72.96088},
   {state: 'square', content: 'B', lat: -39.66462, lon: -72.95827},
-  {state: 'number', content: '7', lat: -39.66421, lon: -72.95521},
+  {state: 'number', content: '7', lat: -39.66405, lon: -72.95521},
   {state: 'square', content: 'A', lat: -39.66377, lon: -72.95601},
   {state: 'square', content: 'B', lat: -39.66369, lon: -72.95517},
-  {state: 'square', content: 'C', lat: -39.66428, lon: -72.95501},
+  {state: 'square', content: 'C', lat: -39.66423, lon: -72.95491},
   {state: 'square', content: 'D', lat: -39.66394, lon: -72.95476},
   {state: 'square', content: 'E', lat: -39.66366, lon: -72.95444},
-  {state: 'number', content: '8', lat: -39.66323, lon: -72.95587},
+  {state: 'number', content: '8', lat: -39.66264, lon: -72.95575},
   {state: 'square', content: 'A', lat: -39.66262, lon: -72.95627},
   {state: 'square', content: 'B', lat: -39.66282, lon: -72.95589},
   {state: 'square', content: 'C', lat: -39.66305, lon: -72.95560},
@@ -158,8 +172,11 @@ data = [
   {state: 'square', content: 'C', lat: -39.66179, lon: -72.95534},
   {state: 'square', content: 'D', lat: -39.66229, lon: -72.95455},
   {state: 'square', content: 'E', lat: -39.65986, lon: -72.95228},
+  {state: 'number', content: '10', lat: -39.66083, lon: -72.94925},
+  {state: 'square', content: 'A', lat: -39.66102, lon: -72.95055},
+  {state: 'square', content: 'B', lat: -39.66201, lon: -72.94958},
 
-  {state: 'number', content: '17', lat: -39.65945, lon: -72.94809},
+  {state: 'number', content: '17', lat: -39.65926, lon: -72.94809},
   {state: 'square', content: 'A', lat: -39.65945, lon: -72.94743},
   {state: 'square', content: 'B', lat: -39.65983, lon: -72.94873},
   {state: 'square', content: 'C', lat: -39.66054, lon: -72.94886},
