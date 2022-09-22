@@ -98,18 +98,10 @@ const territorios = {
   [-39.66079,-72.94752], [-39.66121,-72.94849], [-39.66067,-72.94886], [-39.66007,-72.94934]]}
 
 // Set zone colors
-const colores = {
-1: "#FE80A9",
-2: "#FCAA0C",
-3: "#FE7F26",
-4: "#B3A2E6",
-5: "#DA0022",
-6: "#888888",
-7: "#20B250",
-8: "#5CF4F1",
-9: "#77CDE8",
-10: "#FD76B8",
-17: "#EF00F1"}
+const colors = {
+1: "#FE80A9", 2: "#FCAA0C", 3: "#FE7F26", 4: "#B3A2E6", 5: "#DA0022", 6: "#888888",
+7: "#20B250", 8: "#5CF4F1", 9: "#77CDE8", 10: "#FD76B8", 17: "#EF00F1"
+}
 
 // Place custom zones
 function createZones(obj, col) {
@@ -119,7 +111,7 @@ function createZones(obj, col) {
   }
 }
 
-createZones(territorios, colores)
+createZones(territorios, colors)
 
 // Bård Romstad's pure css divIcon labels
 data = [
@@ -171,7 +163,7 @@ data = [
   {type: 'number', content: '10', crd: [-39.66083,-72.94925]},
   {type: 'square', content: 'A', crd: [-39.66102,-72.95055]},
   {type: 'square', content: 'B', crd: [-39.66201,-72.94958]},
-// Space for adding missing zones
+// Space for adding missing zone markers
   {type: 'number', content: '17', crd: [-39.65926,-72.94809]},
   {type: 'square', content: 'A', crd: [-39.65945,-72.94743]},
   {type: 'square', content: 'B', crd: [-39.65983,-72.94873]},
