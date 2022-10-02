@@ -1,4 +1,4 @@
 # mafil-map
-Voluntary work - Custom map layers for online map
+Map with custom layers used to organize voluntary work.
 
 Live demo: https://territoriosmafil.netlify.app/
